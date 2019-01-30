@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAB2-EE2\Admin2018"
+  DTS:CreatorComputerName="LAB2-EE2"
+  DTS:CreationDate="1/28/2019 8:39:25 AM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{BEAAD893-F5D2-4640-B801-33A5DE6647BB}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{19935EB2-2A8E-4706-AFA2-F19A547B55F1}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:ObjectName="SMTP Connection Manager"
+      DTS:DTSID="{B6897970-3011-49FB-BCE3-00668C7B7FC2}"
+      DTS:CreationName="SMTP">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Package::param1]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp.gmail.com;UseWindowsAuthentication=True;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:Required="True"
+      DTS:DataType="8"
+      DTS:ObjectName="param1"
+      DTS:DTSID="{6B36E7A7-FF5B-4880-98D0-6EFCA5E84B8F}"
+      DTS:CreationName="">
+      <DTS:Property
+        DTS:Name="ParameterValue"
+        DTS:DataType="8">SmtpServer=smtp.gmail.com;UseWindowsAuthentication=True;EnableSsl=False;</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:DataType="8"
+      DTS:ObjectName="SendMailTask_SmtpConnection"
+      DTS:DTSID="{E103F837-36CC-43C8-ABF0-3435C0621835}"
+      DTS:CreationName="">
+      <DTS:Property
+        DTS:Name="ParameterValue"
+        DTS:DataType="8">smtpserver=smtp.gmail.com;user=rushikmaniar107@gmail.com;password=shreejivasudev107!</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:DataType="8"
+      DTS:ObjectName="SendMailTask_SmtpConnection1"
+      DTS:DTSID="{6B844568-0020-4351-9184-E60FC2E2F1FF}"
+      DTS:CreationName="">
+      <DTS:Property
+        DTS:Name="ParameterValue"
+        DTS:DataType="8">smtpserver=smtp.gmail.com;port=587;user=rushikmaniar107@gmail.com;password=shreejivasudev107!</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Send Mail Task"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Send Mail Task"
+      DTS:DTSID="{864B6330-3ECC-42B8-BF1A-53298C922CEB}"
+      DTS:Description="Send Mail Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{B6897970-3011-49FB-BCE3-00668C7B7FC2}"
+          SendMailTask:From="bca16gdrive@gmail.com"
+          SendMailTask:To="yolagewa@utoo.email"
+          SendMailTask:Subject="Test" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Send Mail Task"
+          TopLeft="270,152" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

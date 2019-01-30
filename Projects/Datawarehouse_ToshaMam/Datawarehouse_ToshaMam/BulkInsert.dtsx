@@ -1,0 +1,87 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAB2-EE2\Admin2018"
+  DTS:CreatorComputerName="LAB2-EE2"
+  DTS:CreationDate="1/29/2019 10:10:01 AM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{A04D321B-853D-4B15-BAEB-0C9A1D92C93E}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="BulkInsert"
+  DTS:DTSID="{658652A7-EF63-4F9D-B4A6-0518C910F696}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HP-PC.rushik.bca609]"
+      DTS:ObjectName="HP-PC.rushik.bca609"
+      DTS:DTSID="{DFAFDCA4-02A2-4EEE-8E6F-28B5D7DDCA9C}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=HP-PC;User ID=bca609;Initial Catalog=rushik;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAmuLntzUJ0SHA14fmBiGtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSAspZjl+xjglRtW/iInrTg+Dd4ROQlCRXlotYLZhC4gAAAAAOgAAAAAIAACAAAABIzJZe/FRLpimdR3uKuxcZ+5tfvij9zUUI8Wt5SjdoHBAAAADEgRgfetan7U2IgoZFCvzOQAAAAKEG/ssQvQJEzuSg9PgU3XUdD8JfHMZPU16cbsa8v5kap8qE+ujzpiyG3F3TjzMi8C2mgE4R/0IU7n8AqEax2xY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[rushik.txt]"
+      DTS:ObjectName="rushik.txt"
+      DTS:DTSID="{193DB1B0-459A-4F4A-B947-DD17FB3098DA}"
+      DTS:CreationName="FILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="E:\Rushik\sem6\Datawarehouse\rushik.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Bulk Insert Task"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Bulk Insert Task"
+      DTS:DTSID="{F6D99155-D2BD-49AB-823A-FA69D611CFA5}"
+      DTS:Description="Bulk Insert Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask, Microsoft.SqlServer.BulkInsertTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <BulkInsertTask:BulkInsertTaskData
+          BulkInsertTask:CheckConstraints="False"
+          BulkInsertTask:SourceConnectionName="{193DB1B0-459A-4F4A-B947-DD17FB3098DA}"
+          BulkInsertTask:DestinationConnectionName="{DFAFDCA4-02A2-4EEE-8E6F-28B5D7DDCA9C}"
+          BulkInsertTask:DestinationTableName="[dbo].[Country]"
+          BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Bulk Insert Task"
+          TopLeft="82,144" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

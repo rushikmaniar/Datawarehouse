@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HP-PC.rushik.bca609"
+  DTS:DTSID="{268E8AFC-09EF-419C-ABAB-EFB7A775F417}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=HP-PC;User ID=bca609;Initial Catalog=rushik;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAmuLntzUJ0SHA14fmBiGtwAAAAACAAAAAAAQZgAAAAEAACAAAAB0uiHtq8kyIlhwKPi2/LlscWL0Vs9sgfpvI/Y3h/gnjwAAAAAOgAAAAAIAACAAAABrutVn0vxjpC9iz+goeOCYb9yNTqzdppIDBlS3NlXvz4AAAADuKyt6lrk3rtaKvzTw6FAqP9iYTtN3nXEo6fuxyKXfygJRDKkPSuCDYURnMlDntNe8VOvrAwMyjnzKhRcQRtaeP3arWRhziZ5R5HxTH2DOp/IO0zM2XIV+3Vz9JQvbGR3mdTh45SCFQSRw1TA7DdzW49gR6m1gkAzd10LLkNrQ4kAAAADFAMrEBS22xcOQOHLL2cWdYdNijSlodyjNbmk07fqq9fOj9pvL5zRiDssOl7b+SibW06ky6rdusZMsTk2Yw1gn</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

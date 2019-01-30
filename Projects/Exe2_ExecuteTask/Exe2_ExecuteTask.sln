@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Exe2_ExecuteTask", "Exe2_ExecuteTask\Exe2_ExecuteTask.dtproj", "{FD85AAED-02D5-41C3-BCAD-7EC68D75EDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD85AAED-02D5-41C3-BCAD-7EC68D75EDBB}.Development|Default.ActiveCfg = Development
+		{FD85AAED-02D5-41C3-BCAD-7EC68D75EDBB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
